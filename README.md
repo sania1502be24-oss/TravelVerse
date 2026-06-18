@@ -1,104 +1,45 @@
-# 🌍 TravelVerse
+# TravelVerse - Tour Himachal
 
-TravelVerse is a smart travel and safety platform focused on exploring the beauty of Himachal Pradesh. It helps users discover tourist attractions district-wise, explore hidden gems, track live location, and improve travel safety through SOS and red-zone alerts.
+A full-stack travel application for exploring Himachal Pradesh, featuring real-time hazard reporting, safe destination tracking, and an admin dashboard.
 
----
+## Deployment Links
 
-## ✨ Features
+- **Frontend**: [https://travel-verse-sable.vercel.app/](https://travel-verse-sable.vercel.app/)
+- **Backend**: [https://travelverse-production.up.railway.app/](https://travelverse-production.up.railway.app/)
 
-### 🏔 District-wise Tourism Guide
-- Browse tourist places from every district of Himachal Pradesh
-- Detailed exploration of famous destinations
-- Organized district-based navigation
+## Key Features
 
-### 🔍 Hidden Gems
-- Discover lesser-known and unexplored spots
-- Unique travel recommendations beyond popular tourist locations
+- **Real-time Hazard Feed**: Live updates on landslides, floods, and other travel hazards using Socket.io.
+- **Destination Map**: Interactive map showing popular spots, hidden gems, and red zones.
+- **Admin Dashboard**: Manage users, destinations, and monitor live active users.
+- **Weather Integration**: Live weather updates for travel destinations.
 
-### 📍 Live Location Tracking
-- Real-time location tracking during travel
-- Better navigation and travel monitoring
+## Environment Variables
 
-### 🚨 SOS Emergency System
-- Emergency SOS functionality for user safety
-- Quick access during critical situations
+### Frontend (`/frontend/.env`)
+- `VITE_API_BASE_URL`: The URL of the production backend.
 
-### ⚠️ Red Zone Alerts
-- Detect when users are approaching predefined danger/red zones
-- Sends alerts for safer travel experiences
+### Backend (`/backend/.env`)
+- `PORT`: Server port (default: 5000).
+- `MONGO_URI`: MongoDB connection string.
+- `JWT_SECRET`: Secret key for authentication.
+- `FRONTEND_URL`: The URL of the production frontend (for CORS).
+- `WEATHER_API_KEY`: OpenWeatherMap API key.
+- `imgKitURL`, `ImageKitPrivateKey`, `ImageKitPublicKey`: ImageKit configuration for image uploads.
 
----
+## Tech Stack
 
-## 🛠 Tech Stack
+- **Frontend**: React, Vite, Tailwind CSS, Framer Motion, Lucide React, Axios.
+- **Backend**: Node.js, Express, MongoDB (Mongoose), Socket.io, JWT.
+- **Deployment**: Vercel (Frontend), Railway (Backend).
 
-Frontend:
-- React.js / Next.js *(replace with your actual frontend technology)*
-- HTML
-- CSS
-- JavaScript
+## Setup and Installation
 
-Backend:
-- Node.js / Express *(replace if different)*
-
-Database:
-- MongoDB / Firebase *(replace with your database)*
-
-APIs & Services:
-- Google Maps API
-- Geolocation API
-- Live Location Services
-
----
-
-## 🚀 Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/travelverse.git
-```
-
-Move into project directory:
-
-```bash
-cd travelverse
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run the project:
-
-```bash
-npm start
-```
-
----
-
-## 🎯 Future Improvements
-
-- AI-based travel recommendations
-- Weather forecasting integration
-- Route optimization
-- User reviews and ratings
-- Trip planning assistant
-- Offline mode support
-
----
-
-## 🤝 Contribution
-
-Contributions, suggestions, and improvements are welcome.
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit changes
-4. Push to your branch
-5. Open a Pull Request
-
----
-
-Made with ❤️ for travelers and explorers of Himachal Pradesh
+1. Clone the repository.
+2. Install dependencies:
+   - `cd frontend && npm install`
+   - `cd backend && npm install`
+3. Configure environment variables in `.env` files for both frontend and backend.
+4. Run locally:
+   - Frontend: `npm run dev`
+   - Backend: `npm start`
